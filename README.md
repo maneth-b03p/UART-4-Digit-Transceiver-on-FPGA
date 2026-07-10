@@ -8,9 +8,9 @@ UART communication system for Intel/Altera FPGAs. One board edits a 4-digit BCD 
 - `sim/` — Testbenches (loopback test and dual-board simulation)
 - `quartus/` — Quartus Prime project files (`.qpf`, `.qsf`)
 
-## Modules (file -> module)
+## Modules
 
-| Module (file) | Description |
+| Module | Description |
 |---------------|-------------|
 | `uart_top` (rtl/uart_top.v) | Top-level: ties display, UART transmitter and receiver, and baud generator together. Uses active-low reset `rst_n` on the top interface. |
 | `transmitter` (rtl/tx.v) | UART transmitter: 1 start, 8 data bits (LSB first), 1 stop. Driven by the `tx_enb` tick from the baud generator. |
