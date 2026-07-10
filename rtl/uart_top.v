@@ -30,7 +30,6 @@ module uart_top(
         .btn_up(btn_up),
         .btn_down(btn_down),
         .btn_reset(rst_n),
-        // Trigger when first 4 bits are 0000
         .external_load(rdy && (received_byte >= 8'h00 && received_byte <= 8'h09)),
         .external_data(received_byte[3:0]), 
         .display_seg(display_seg),
