@@ -33,16 +33,6 @@ UART communication system for Intel/Altera FPGAs. One board edits a 4-digit BCD 
 
 - Quick simulation (with Icarus Verilog):
 
-```bash
-# from repo root
-iverilog -o uart_sim_out sim/uart1_tb.v rtl/*.v
-vvp uart_sim_out
-# open generated VCD (if testbench emits one) with gtkwave
-# gtkwave dump.vcd
-```
-
-(Add or adapt the commands if you prefer Verilator or your preferred simulator.)
-
 
 ## How to run on hardware / Quartus
 
