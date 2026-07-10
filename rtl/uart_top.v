@@ -24,7 +24,7 @@ module uart_top(
     reg [2:0] tx_state;
 
     
-    seven_seg display_unit (
+    seven_seg_mux display_unit (
         .clk(clk),
         .btn_next(btn_next),
         .btn_up(btn_up),
