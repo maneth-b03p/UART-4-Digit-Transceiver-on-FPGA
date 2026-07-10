@@ -31,7 +31,6 @@ UART communication system for Intel/Altera FPGAs. One board edits a 4-digit BCD 
 
 - The `sim/uart1_tb.v` testbench runs a two-board simulation: it drives one `uart_top` as the Master, programs its 4-digit BCD value to 5678 using the front-panel button stimulus, then triggers a send so the Slave `uart_top` receives and updates its display. The testbench sets the clock to 50 MHz (20 ns period) to match the baud generator assumptions.
 
-- Quick simulation (with Icarus Verilog):
 
 
 ## How to run on hardware / Quartus
