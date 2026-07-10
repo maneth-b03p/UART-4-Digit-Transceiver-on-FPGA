@@ -37,15 +37,3 @@ UART communication system for Intel/Altera FPGAs. One board edits a 4-digit BCD 
 
 See `quartus/` for a sample project file set. You will need to assign pins in the .qsf file to match your FPGA board and the wiring for the 7-segment display and UART pins. The design assumes a 50 MHz input clock unless you change the baud generator constants.
 
-
-## What changed vs. earlier README
-
-- Module names in this README were aligned to the actual Verilog module identifiers and filenames: `transmitter` / `receiver` / `seven_seg_mux` etc.
-- The separate `debouncer` module is not listed as a separate, required module because the display controller contains debounce logic — remove the unused debouncer file if you don't plan to use it as a standalone module.
-- Clarified the external-load condition and simulation behavior (the testbench programs 5678 and triggers send).
-
-
-## Try asking
-- Does uart1_tb actually drive the exact timing you expect for debouncing and button presses (it uses 21 ms pulses in the TB)?
-- Do you want the README to include a pinout example for a specific FPGA board (.qsf snippet)?
-- Should the baud generator be parameterized for easier clock/baud changes (I can propose a small patch)?
